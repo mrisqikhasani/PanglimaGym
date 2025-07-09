@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muscle - Dafin Gym</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header
+      id="mainHeader"
+      class="fixed top-0 w-full z-40 bg-white py-6 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto max-w-screen-xl flex items-center justify-between px-4"
+      >
+        <!-- Logo -->
+        <a href="#" class="font-bold text-2xl text-blue-600">Dafin Gym</a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#" class="text-gray-800 hover:text-blue-600 font-medium">Home</a>
+          <a
+            href="muscle.html"
+            class="text-gray-800 hover:text-blue-600 font-medium"
+            >Muscle</a
+          >
+          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-medium"
+            >Services</a
+          >
+          <a href="#" class="text-gray-800 hover:text-blue-600 font-medium"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileToggle" class="block lg:hidden p-2">
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
+          <span class="block w-6 h-0.5 bg-gray-800"></span>
+        </button>
+      </div>
+
+      <!-- Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-30"></div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden fixed top-0 right-0 h-full w-64 bg-white translate-x-full transition-transform duration-300 z-50 shadow-lg"
+      >
+        <div class="flex items-center justify-between p-4 border-b">
+          <a href="#" class="text-xl font-bold text-blue-600">Dafin Gym</a>
+          <button id="closeMobileMenu" class="w-6 h-6" aria-label="Close menu">
+            <svg
+              class="w-6 h-6 text-gray-800"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col p-4 gap-4">
+          <a href="#" class="text-gray-800 hover:text-blue-600 font-medium"
+            >Home</a
+          >
+          <a
+            href="muscle.html"
+            class="text-gray-800 hover:text-blue-600 font-medium"
+            >Muscle</a
+          >
+          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-medium"
+            >Services</a
+          >
+          <a href="#" class="text-gray-800 hover:text-blue-600 font-medium"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+      <div class="container mx-auto max-w-screen-xl px-4 text-center">
+        <h1 class="text-3xl font-bold mb-6">Select Your Muscle</h1>
+
+        <!-- Buttons -->
+        <div class="flex flex-wrap justify-center gap-4 mb-10">
+          <button
+            onclick="showVideo('chest')"
+            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+          >
+            Chest
+          </button>
+          <button
+            onclick="showVideo('back')"
+            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+          >
+            Back
+          </button>
+          <button
+            onclick="showVideo('leg')"
+            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
+          >
+            Leg
+          </button>
+        </div>
+
+        <!-- Video Container -->
+        <div
+          class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow"
+        >
+          <iframe
+            id="muscleVideo"
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/4alAfL1OcZg"
+            title="Muscle Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script src="scripts.js"></script>
+  </body>
+</html>
