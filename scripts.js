@@ -54,9 +54,9 @@ document.getElementById("nextBtn").onclick = function () {
 // show video for file muscle html change video by click different video
 function showVideo(muscle) {
     const videoMap = {
-        chest: "https://www.youtube.com/embed/dQw4w9WgXcQ", // ganti dengan video chest
-        back: "https://www.youtube.com/embed/oHg5SJYRHA0", // ganti dengan video back
-        leg: "https://www.youtube.com/embed/YbJOTdZBX1g" // ganti dengan video leg
+        chest: "https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d", 
+        back: "https://www.youtube.com/embed/b0yw06rMBAY?si=yHHW9OoKMhjpdonw", // ganti dengan video back
+        leg: "https://www.youtube.com/embed/5ikOzvb0K70?si=9SGRwBRhHhuLj23u" // ganti dengan video leg
     };
     const iframe = document.getElementById("muscleVideo");
     iframe.src = videoMap[muscle];
