@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Videos - Dafin Gym</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#08244d',
+              secondary: '#010101',
+              third: '#ff8f00',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header id="mainHeader" class="fixed top-0 w-full z-40 bg-primary py-6 transition-all duration-300">
+      <div class="container mx-auto max-w-screen-xl flex items-center justify-between px-4">
+        <!-- Logo -->
+        <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="index.html" class="text-white hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-white hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-third hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileToggle" class="block lg:hidden p-2">
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
+        </button>
+      </div>
+
+      <!-- Overlay -->
+      <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-30"></div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="lg:hidden fixed top-0 right-0 h-full w-64 bg-secondary translate-x-full transition-transform duration-300 z-50 shadow-lg"
+      >
+        <div class="flex items-center justify-between p-4 border-b">
+          <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
+          <button id="closeMobileMenu" class="w-6 h-6" aria-label="Close menu">
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+        <nav class="flex flex-col p-4 gap-4">
+          <a href="index.html" class="text-white hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-white hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-third hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="py-20 bg-secondary">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <h2 class="text-3xl font-bold mb-6 pt-10 text-center text-white">Tutorial Gym</h2>
+
+        <h3 class="text-xl font-semibold text-left text-white mb-4">
+          🏋🏽 Chest
+        </h3>
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-10">
+          <!-- Card Gym -->
+          <div class="bg-primary rounded-lg shadow p-4">
+            <div
+              class="relative w-full h-48 rounded-lg flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow"
+            >
+              <iframe
+                class="absolute inset-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d"
+                title="YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <h3 class="text-lg text-white font-semibold mt-1">Latihan Otot Dada</h3>
+            <p class="text-sm text-gray-100 mb-1">
+              oleh Dafin
+            </p>
+            <p class="text-xs text-gray-400">
+                22 Menit yang Lalu
+            </p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-left text-white mb-4">
+          🏋🏽 Back
+        </h3>
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-10">
+          <!-- Card Gym -->
+          <div class="bg-primary rounded-lg shadow p-4">
+            <div
+              class="relative w-full h-48 rounded-lg flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow"
+            >
+              <iframe
+                class="absolute inset-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d"
+                title="YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <h3 class="text-lg text-white font-semibold mt-1">Latihan Otot Punggung</h3>
+            <p class="text-sm text-gray-100 mb-1">
+              oleh Dafin
+            </p>
+            <p class="text-xs text-gray-400">
+                1 Hari yang Lalu
+            </p>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-semibold text-left text-white mb-4">
+          🏋🏽 Leg
+        </h3>
+        <div
+          class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-10">
+          <!-- Card Gym -->
+          <div class="bg-primary rounded-lg shadow p-4">
+            <div
+              class="relative w-full h-48 rounded-lg flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow"
+            >
+              <iframe
+                class="absolute inset-0 w-full h-full rounded-lg"
+                src="https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d"
+                title="YouTube video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <h3 class="text-lg text-white font-semibold mt-1">Latihan Otot Kaki</h3>
+            <p class="text-sm text-gray-100 mb-1">
+              oleh Dafin
+            </p>
+            <p class="text-xs text-gray-400">
+                1 Minggu yang Lalu
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script -->
+    <script src="scripts.js"></script>
+  </body>
+</html>

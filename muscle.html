@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muscle - Dafin Gym</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#08244d',
+              secondary: '#010101',
+              third: '#ff8f00',
+            },
+          },
+        },
+      };
+    </script>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -20,35 +34,28 @@
     <!-- Header -->
     <header
       id="mainHeader"
-      class="fixed top-0 w-full z-40 bg-white py-6 transition-all duration-300"
+      class="fixed top-0 w-full z-40 bg-primary py-6 transition-all duration-300"
     >
       <div
         class="container mx-auto max-w-screen-xl flex items-center justify-between px-4"
       >
         <!-- Logo -->
-        <a href="#" class="font-bold text-2xl text-blue-600">Dafin Gym</a>
+        <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
 
         <!-- Desktop Menu -->
         <nav class="hidden lg:flex items-center gap-8">
-          <a href="index.html" class="text-gray-800 hover:text-blue-600 font-medium">Home</a>
-          <a
-            href="muscle.html"
-            class="text-blue-600 font-medium"
-            >Muscle</a
-          >
-          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-medium"
-            >Nurition</a
-          >
-          <a href="contact.html" class="text-gray-800 hover:text-blue-600 font-medium"
-            >Contact</a
-          >
+          <a href="index.html" class="text-white hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-third hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-white hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
         </nav>
 
         <!-- Mobile Menu Toggle -->
         <button id="mobileToggle" class="block lg:hidden p-2">
-          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-800"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
         </button>
       </div>
 
@@ -58,13 +65,13 @@
       <!-- Mobile Menu -->
       <div
         id="mobileMenu"
-        class="lg:hidden fixed top-0 right-0 h-full w-64 bg-white translate-x-full transition-transform duration-300 z-50 shadow-lg"
+        class="lg:hidden fixed top-0 right-0 h-full w-64 bg-secondary translate-x-full transition-transform duration-300 z-50 shadow-lg"
       >
         <div class="flex items-center justify-between p-4 border-b">
-          <a href="#" class="text-xl font-bold text-blue-600">Dafin Gym</a>
+          <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
           <button id="closeMobileMenu" class="w-6 h-6" aria-label="Close menu">
             <svg
-              class="w-6 h-6 text-gray-800"
+              class="w-6 h-6 text-white"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -79,54 +86,42 @@
           </button>
         </div>
         <nav class="flex flex-col p-4 gap-4">
-          <a href="index.html" class="text-gray-800 hover:text-blue-600 font-medium"
-            >Home</a
-          >
-          <a
-            href="muscle.html"
-            class="text-blue-600 font-medium"
-            >Muscle</a
-          >
-          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-medium"
-            >Nurition</a
-          >
-          <a href="contact.html" class="text-gray-800 hover:text-blue-600 font-medium"
-            >Contact</a
-          >
+          <a href="index.html" class="text-white hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-third hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-white hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Main Content -->
-    <section class="pt-32 pb-20 bg-gray-100">
+    <section class="pt-32 pb-20 bg-secondary">
       <div class="container mx-auto max-w-screen-xl px-4 text-center">
-        <h1 class="text-3xl font-bold mb-6">Select Your Muscle</h1>
+        <h1 class="text-3xl font-bold mb-6 text-white">Select Your Muscle</h1>
 
         <!-- Buttons -->
         <div class="flex flex-wrap justify-center gap-4 mb-10">
           <button
             onclick="showVideo('chest')"
-            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
-          >
+            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
             Chest
           </button>
           <button
             onclick="showVideo('back')"
-            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
-          >
+            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
             Back
           </button>
           <button
             onclick="showVideo('leg')"
-            class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition"
-          >
+            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
             Leg
           </button>
         </div>
 
         <!-- Video Container -->
         <div
-          class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow"
+          class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow border-4 border-dashed border-gray-400"
         >
           <iframe
             id="muscleVideo"

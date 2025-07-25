@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dafin Gym</title>
+    <title>Home - Dafin Gym</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,6 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#08244d',
+              secondary: '#010101',
+              third: '#ff8f00',
+            },
+          },
+        },
+      };
+    </script>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -19,24 +32,25 @@
   </head>
   <body class="bg-white text-gray-900 relative">
     <!-- Header -->
-    <header id="mainHeader" class="fixed bg-white top-0 w-full z-40  py-6 transition-all duration-300">
+    <header id="mainHeader" class="fixed bg-primary top-0 w-full z-40  py-6 transition-all duration-300">
       <div class="container mx-auto max-w-screen-xl flex items-center justify-between px-4">
         <!-- Logo -->
-        <a href="index.html" class="font-bold text-2xl text-blue-600">Dafin Gym</a>
+        <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
 
         <!-- Desktop Menu -->
         <nav class="hidden lg:flex items-center gap-8">
-          <a href="index.html" class="text-blue-600 font-semibold">Home</a>
-          <a href="muscle.html" class="text-gray-800 hover:text-blue-600 font-semibold">Muscle</a>
-          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-semibold">Nutrition</a>
-          <a href="contact.html" class="text-gray-800 hover:text-blue-600 font-semibold">Contact</a>
+          <a href="index.html" class="text-third hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-white hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-white hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
         </nav>
 
         <!-- Mobile Menu Toggle -->
         <button id="mobileToggle" class="block lg:hidden p-2">
-          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-800 mb-1"></span>
-          <span class="block w-6 h-0.5 bg-gray-800"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white mb-1"></span>
+          <span class="block w-6 h-0.5 bg-white"></span>
         </button>
       </div>
 
@@ -44,61 +58,62 @@
       <div id="overlay" class="hidden fixed inset-0 bg-black/50 z-30"></div>
 
       <!-- Mobile Menu -->
-      <div id="mobileMenu" class="lg:hidden fixed top-0 right-0 h-full w-64 bg-white translate-x-full transition-transform duration-300 z-50 shadow-lg">
+      <div id="mobileMenu" class="lg:hidden fixed top-0 right-0 h-full w-64 bg-secondary translate-x-full transition-transform duration-300 z-50 shadow-lg">
         <div class="flex items-center justify-between p-4 border-b">
-          <a href="#" class="text-xl font-bold text-blue-600">Dafin Gym</a>
+          <a href="index.html" class=""><img src="images/logo.svg" class="w-16"/></a>
           <button id="closeMobileMenu" class="w-6 h-6" aria-label="Close menu">
-            <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
             </svg>
           </button>
         </div>
         <nav class="flex flex-col p-4 gap-4">
-          <a href="index.html" class="text-blue-600 font-medium">Home</a>
-          <a href="muscle.html" class="text-gray-800 hover:text-blue-600 font-medium">Muscle</a>
-          <a href="nurition.html" class="text-gray-800 hover:text-blue-600 font-medium">Nutrition</a>
-          <a href="contact.html" class="text-gray-800 hover:text-blue-600 font-medium">Contact</a>
+          <a href="index.html" class="text-third hover:text-third font-semibold">Home</a>
+          <a href="muscle.html" class="text-white hover:text-third font-semibold">Muscle</a>
+          <a href="nurition.html" class="text-white hover:text-third font-semibold">Nurition</a>
+          <a href="videos.html" class="text-white hover:text-third font-semibold">Videos</a>
+          <a href="contact.html" class="text-white hover:text-third font-semibold">Contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home-section" class="pt-32 pb-12 bg-gray-100">
+    <section id="home-section" class="pt-32 pb-12 bg-secondary">
       <div class="container mx-auto max-w-screen-xl px-4">
         <div class="grid grid-cols-1 lg:grid-cols-12 items-center gap-8">
           <!-- Text Content -->
           <div class="lg:col-span-5 flex flex-col gap-8 text-center lg:text-left">
             <div class="flex items-center justify-center lg:justify-start gap-2">
               <span class="iconify w-5 h-5 text-green-600" data-icon="solar:verified-check-bold"></span>
-              <p class="text-green-600 text-sm font-semibold">Fitness is more than just exercise.</p>
+              <p class="text-green-400 text-sm font-semibold">Fitness is more than just exercise.</p>
             </div>
 
-            <h1 class="text-4xl sm:text-5xl font-semibold text-gray-900 pt-5">
+            <h1 class="text-4xl sm:text-5xl font-semibold text-white pt-5">
               Empowering Lives Through Fitness Education.
             </h1>
-            <h3 class="text-lg text-gray-700 pt-5">
-              Join thousands learning how to train smart, eat better, and live stronger — together with Dafin Gym's expert resources.
+            <h3 class="text-lg text-white pt-5">
+              Join thousands learning how to train smart, eat better, and live stronger, together with Dafin Gym's expert resources.
             </h3>
 
             <div class="flex flex-wrap justify-center lg:justify-start gap-6 pt-6">
               <div class="flex items-center gap-2">
                 <img src="images/banner/check-circle.svg" alt="check" class="w-6 h-6" />
-                <p class="text-sm md:text-base lg:text-lg text-black">Education</p>
+                <p class="text-sm md:text-base lg:text-lg text-white">Education</p>
               </div>
               <div class="flex items-center gap-2">
                 <img src="images/banner/check-circle.svg" alt="check" class="w-6 h-6" />
-                <p class="text-sm md:text-base lg:text-lg text-black">Learning path</p>
+                <p class="text-sm md:text-base lg:text-lg text-white">Learning path</p>
               </div>
               <div class="flex items-center gap-2">
                 <img src="images/banner/check-circle.svg" alt="check" class="w-6 h-6" />
-                <p class="text-sm md:text-base lg:text-lg text-black">Community</p>
+                <p class="text-sm md:text-base lg:text-lg text-white">Community</p>
               </div>
             </div>
           </div>
 
           <!-- Video Content -->
           <div class="lg:col-span-7 flex justify-center">
-            <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[450px] bg-gray-300 rounded-3xl flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow">
+            <div class="relative w-full h-64 sm:h-80 md:h-96 lg:h-[450px] rounded-3xl flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow">
               <iframe
                 class="absolute inset-0 w-full h-full rounded-3xl"
                 src="https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d"
