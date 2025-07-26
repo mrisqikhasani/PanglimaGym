@@ -61,3 +61,40 @@ function showVideo(muscle) {
     const iframe = document.getElementById("muscleVideo");
     iframe.src = videoMap[muscle];
 }
+
+  const vid = document.getElementById("myvid");
+  const progressbar = document.getElementById("pg");
+  const currentTimeEl = document.getElementById("currentTime");
+  const durationEl = document.getElementById("duration");
+
+  function playPause() {
+    if (vid.paused) {
+      vid.play();
+    } else {
+      vid.pause();
+    }
+  }
+
+  function mute() {
+    vid.muted = !vid.muted;
+  }
+
+  function vidVol() {
+    vid.volume = vid.volume === 1.0 ? 0.5 : 1.0;
+  }
+
+  vid.addEventListener("loadedmetadata", () => {
+    durationEl.textContent = formatTime(vid.duration);
+  });
+
+  vid.addEventListener("timeupdate", () => {
+    const pos = vid.currentTime / vid.duration;
+    progressbar.style.width = pos * 100 + "%";
+    currentTimeEl.textContent = formatTime(vid.currentTime);
+  });
+
+  function formatTime(sec) {
+    const minutes = Math.floor(sec / 60);
+    const seconds = Math.floor(sec % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  }
