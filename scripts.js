@@ -51,15 +51,29 @@ document.getElementById("nextBtn").onclick = function () {
     imgEl.src = images[current];
 };
 
-// show video for file muscle html change video by click different video
-function showVideo(muscle) {
+function showVideo(muscle, element) {
     const videoMap = {
         chest: "/videos/muscle-chest.mp4", 
         back: "/videos/muscle-back.mp4", 
         leg: "/videos/muscle-leg.mp4" 
     };
-    const iframe = document.getElementById("muscleVideo");
-    iframe.src = videoMap[muscle];
+    
+    const videoPlayer = document.getElementById("muscleVideo");
+    
+    if (videoPlayer && videoMap[muscle]) {
+        videoPlayer.src = videoMap[muscle];
+        videoPlayer.play();
+
+        const allButtons = document.querySelectorAll('.muscle-btn');
+        
+        allButtons.forEach(btn => {
+            btn.classList.remove('bg-primary', 'text-white');
+            btn.classList.add('bg-white', 'text-black');
+        });
+
+        element.classList.remove('bg-white', 'text-black');
+        element.classList.add('bg-primary', 'text-white');
+    }
 }
 
   const vid = document.getElementById("myvid");

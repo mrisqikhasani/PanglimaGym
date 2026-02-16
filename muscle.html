@@ -98,23 +98,23 @@
     <!-- Main Content -->
     <section class="min-h-screen flex items-center pt-24 pb-12 bg-secondary">
       <div class="container mx-auto max-w-screen-xl px-4 text-center">
-        <h1 class="text-3xl font-bold mb-6 text-white">Select Your Muscle</h1>
+        <h1 class="text-3xl font-bold mb-6 pt-10 text-white">Select Your Muscle</h1>
 
         <!-- Buttons -->
         <div class="flex flex-wrap justify-center gap-4 mb-10">
           <button
-            onclick="showVideo('chest')"
-            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
+            onclick="showVideo('chest', this)"
+            class="muscle-btn bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition duration-200 ease-in font-semibold hover:bg-primary hover:text-white">
             Chest
           </button>
           <button
-            onclick="showVideo('back')"
-            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
+            onclick="showVideo('back', this)"
+            class="muscle-btn bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition duration-200 ease-in font-semibold hover:bg-primary hover:text-white">
             Back
           </button>
           <button
-            onclick="showVideo('leg')"
-            class="bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition font-semibold">
+            onclick="showVideo('leg', this)"
+            class="muscle-btn bg-white text-black px-7 py-3 rounded-full hover:bg-gray-200 transition duration-200 ease-in font-semibold hover:bg-primary hover:text-white">
             Leg
           </button>
         </div>
