@@ -96,7 +96,7 @@
     </header>
 
     <!-- Main Content -->
-    <section class="pt-32 pb-20 bg-secondary">
+    <section class="min-h-screen flex items-center pt-24 pb-12 bg-secondary">
       <div class="container mx-auto max-w-screen-xl px-4 text-center">
         <h1 class="text-3xl font-bold mb-6 text-white">Select Your Muscle</h1>
 
@@ -121,17 +121,18 @@
 
         <!-- Video Container -->
         <div
-          class="relative w-full max-w-4xl mx-auto aspect-video rounded-xl overflow-hidden shadow border-4 border-dashed border-gray-400"
+          class="relative mx-auto w-full max-w-[350px] aspect-[9/16] rounded-3xl flex items-center justify-center border-4 border-dashed border-gray-400 overflow-hidden shadow"
         >
-          <iframe
+          <video
             id="muscleVideo"
-            class="w-full h-full"
-            src="https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d"
-            title="Muscle Video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            class="absolute inset-0 w-full h-full object-cover rounded-3xl"
+            src="/videos/muscle-leg.mp4" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            controls
+          ></video>
         </div>
       </div>
     </section>

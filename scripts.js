@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
-// Simple carousel logic
+
 const images = [
     "https://via.placeholder.com/600x400?text=Image+1",
     "https://via.placeholder.com/600x400?text=Image+2",
@@ -54,9 +54,9 @@ document.getElementById("nextBtn").onclick = function () {
 // show video for file muscle html change video by click different video
 function showVideo(muscle) {
     const videoMap = {
-        chest: "https://www.youtube.com/embed/gEn7E6vZOPc?si=SXC1s-KzVp6oun0d", 
-        back: "https://www.youtube.com/embed/b0yw06rMBAY?si=yHHW9OoKMhjpdonw", // ganti dengan video back
-        leg: "https://www.youtube.com/embed/5ikOzvb0K70?si=9SGRwBRhHhuLj23u" // ganti dengan video leg
+        chest: "/videos/muscle-chest.mp4", 
+        back: "/videos/muscle-back.mp4", 
+        leg: "/videos/muscle-leg.mp4" 
     };
     const iframe = document.getElementById("muscleVideo");
     iframe.src = videoMap[muscle];
