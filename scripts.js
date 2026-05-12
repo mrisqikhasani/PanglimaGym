@@ -1,3 +1,11 @@
+// Baca userid & courseid dari URL
+const params   = new URLSearchParams(window.location.search);
+const userId   = params.get('userid');
+const courseId = params.get('courseid');
+
+console.log('userId:', userId);
+console.log('courseId:', courseId);
+
 document.addEventListener("DOMContentLoaded", () => {
     const mobileToggle = document.getElementById("mobileToggle");
     const mobileMenu = document.getElementById("mobileMenu");
