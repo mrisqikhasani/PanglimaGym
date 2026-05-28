@@ -2,9 +2,11 @@
 const params   = new URLSearchParams(window.location.search);
 const userId   = params.get('userid');
 const courseId = params.get('courseid');
+const fullname = params.get('fullname');
 
 console.log('userId:', userId);
 console.log('courseId:', courseId);
+console.log('fullname:', fullname);
 
 document.addEventListener("DOMContentLoaded", () => {
     const mobileToggle = document.getElementById("mobileToggle");
